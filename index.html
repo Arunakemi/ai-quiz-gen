@@ -1,27 +1,44 @@
-<html>
+<html lang="es">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="./assets/style.css">
   </head>
   <body>
-        <div id="Registro">
-            <div class="boton" id="regBtn">Registrarme</div>
+    <div id="mainData">
+        <div class="internal" id="SoyMayorDeEdad"
+        style='background-image:url("./assets/img/1-Bienvenida/bg.jpg");'>
+            <div style="margin-top:80%;" class="divider"></div>
+            <div class="continueBoton" id="mayorBtn">Continuar</div>
+            <input style="margin-left: 10%; display:block; float:left; " type="checkbox" id="mayorCheck">
+            <label for="mayorCheck" class="checkboxLabel">Soy mayor de edad</label>
         </div>
-        <div id="SoyMayorDeEdad">
-            <div class="boton" id="mayorBtn">Si soy mayor</div>
+        <div class="internal" id="Registro"
+        style='background-image:url("./assets/img/2-Registro/bg.png");'>
+            <div style="margin-top:55%;" class="divider"></div>
+            <div class="boton" ><input id="formNombre" type="text" placeholder="Nombre"></div>
+            <div class="boton" ><input id="formCorreo" type="text" placeholder="Correo"></div>
+            <div class="boton" ><input id="formTelefono" type="text" placeholder="Telefono"></div>
+            <div style="margin-top:15%;" class="divider"></div>
+            <div class="boton" id="regBtn" style="margin-left: 30%; margin-right: 30%; width: 40%; text-align: center;">Crear</div>
         </div>
-        <div id="Quiz">
+        <div class="internal" id="Quiz"
+        style='background-image:url("./assets/img/3-Preguntas/bg.jpg");'>
+            <img src="./assets/img/3-Preguntas/pregunta_1.png">
             <p id="pregunta">Sin pregunta</p>
-            <div class="boton" id="btn1">Boton1</div>
-            <div class="boton" id="btn2">Boton2</div>
-            <div class="boton" id="btn3">Boton3</div>
+            <p style="text-align:center; font-size:50%; position:relative; float:left; width: 100%;">Elige la opcion que mas te guste</p>
+            <div class="botonQuiz left" id="btn1">Boton1</div>
+            <div class="botonQuiz right" id="btn2">Boton2</div>
+            <div class="botonQuiz left" id="btn3">Boton3</div>
+            <div class="botonQuiz right" id="btn4">Boton4</div>
         </div>
-        <div id="CreandoBotella">
-
+        <div class="internal" id="CreandoBotella"
+          style='background-image:url("./assets/img/4-Creando-botella/bg.png");'>
         </div>
-        <div id="Imagen">
-
+        <div class="internal" id="Imagen"
+          style='background-image:url("./assets/img/5-Botella/bg.jpg");'>
         </div>
+      </div>
+      <script src="./assets/index.js"></script>
   </body>
 </html>

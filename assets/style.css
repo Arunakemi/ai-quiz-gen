@@ -1,0 +1,134 @@
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text]
+{
+    border: none;
+    color: #007215;
+    padding-left: 2vw;
+    font-size: 100%;
+}
+
+.internal
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-size: 100%;
+    background-attachment:local;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    position: relative;
+    float: left;
+    height: max-content;
+}
+
+#mainData {
+    font-size: 5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #007215;
+    text-align: center;
+
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.continueBoton
+{
+    font-size: 80%;
+    color: #fefefe;
+    background-color: #007215;
+    float: left;
+    position: relative;
+    border: 1vw solid #007215;
+    border-radius: 5vw;
+    pointer-events:  auto;
+    width: 25%;
+    margin-left: 10%;
+    margin-right: 65%;
+    margin-top: 2vh;
+    padding: 2vw;
+    text-align: center;
+}
+
+.divider
+{
+    width: 100%; 
+    position:relative; 
+    float:left;
+}
+
+.boton {
+    background-color: #fefefe;
+    float: left;
+    position: relative;
+    border: 0.5vw solid #007215;
+    border-radius: 5vw;
+    pointer-events:  auto;
+    width: 74%;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-top: 2vh;
+    padding: 2vw;
+}
+
+.botonQuiz {
+    font-size: 55%;
+    text-align: center;
+    background-color: #fefefe;
+    float: left;
+    position: relative;
+    border: 0.5vw solid #007215;
+    border-radius: 5vw;
+    pointer-events:  auto;
+    width: 35%;
+    margin-top: 2vh;
+    padding: 2vw;
+}
+
+.left {
+    margin-left: 13%;
+    margin-right: 4%;
+}
+.right {
+    margin-right: 13%;
+}
+
+#pregunta {
+    margin-top: 10%;
+    margin-bottom: 0;
+    width: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.checkboxLabel 
+{
+    margin-top: 0.3em;
+    display: block;
+    float: left;
+    position: relative; 
+    font-size: 60%;
+}
+
+.infoEnter {
+    border-color: grey;
+}
