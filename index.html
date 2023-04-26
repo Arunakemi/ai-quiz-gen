@@ -15,16 +15,16 @@
         </div>
         <div class="internal" id="Registro"
         style='background-image:url("./assets/img/2-Registro/bg.png");'>
-            <div style="margin-top:55%;" class="divider"></div>
-            <div class="boton" ><input id="formNombre" type="text" placeholder="Nombre"></div>
-            <div class="boton" ><input id="formCorreo" type="text" placeholder="Correo"></div>
-            <div class="boton" ><input id="formTelefono" type="text" placeholder="Telefono"></div>
-            <div style="margin-top:15%;" class="divider"></div>
-            <div class="boton" id="regBtn" style="margin-left: 30%; margin-right: 30%; width: 40%; text-align: center;">Crear</div>
-        </div>
+              <div style="margin-top:55%;" class="divider"></div>
+              <div class="boton" ><input id="formNombre"   type="text" required placeholder="Nombre"></div>
+              <div class="boton" ><input id="formCorreo"   type="text" required placeholder="Correo"></div>
+              <div class="boton" ><input id="formTelefono" type="text" required placeholder="Telefono"></div>
+              <div style="margin-top:15%;" class="divider"></div>
+              <div class="boton" id="regBtn" style="margin-left: 30%; margin-right: 30%; width: 40%; text-align: center;">Crear</div>
+          </div>
         <div class="internal" id="Quiz"
         style='background-image:url("./assets/img/3-Preguntas/bg.jpg");'>
-            <img src="./assets/img/3-Preguntas/pregunta_1.png">
+            <img id="preguntaImg">
             <p id="pregunta">Sin pregunta</p>
             <p style="text-align:center; font-size:50%; position:relative; float:left; width: 100%;">Elige la opcion que mas te guste</p>
             <div class="botonQuiz left" id="btn1">Boton1</div>
@@ -34,11 +34,19 @@
         </div>
         <div class="internal" id="CreandoBotella"
           style='background-image:url("./assets/img/4-Creando-botella/bg.png");'>
+          <p id="yaCasiEsta"></p>
+          <img id="imgLoad" src="./assets/img/4-Creando-botella/cargando.png">
         </div>
-        <div class="internal" id="Imagen"
-          style='background-image:url("./assets/img/5-Botella/bg.jpg");'>
+        <div class="internal" id="ChooseImagen"
+          style='background-image:url("./assets/img/5-Escoge/bg.png");'>
+        </div>
+        <div class="internal" id="ImagenFinal"
+          style='background-image:url("./assets/img/6-Botella/bg.png");'>
+          <div id="imagenDetras"></div>
+          <p id="nameken"></p>
+          <div style="margin-top:20%;" class="divider"></div>
         </div>
       </div>
-      <script src="./assets/index.js"></script>
+      <script src="./assets/idx.js"></script>
   </body>
 </html>
