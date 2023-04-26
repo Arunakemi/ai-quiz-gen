@@ -36,7 +36,7 @@ img {
     width: 100%;
     position: relative;
     float: left;
-    height: max-content;
+    height: auto;
 }
 
 #mainData {
