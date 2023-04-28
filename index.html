@@ -6,47 +6,92 @@
   </head>
   <body>
     <div id="mainData">
-        <div class="internal" id="SoyMayorDeEdad"
-        style='background-image:url("./assets/img/1-Bienvenida/bg.jpg");'>
+        <!-- START -->
+        <div id="Bienvenida"      style='background-image:url("./assets/img/0-Inicio/bg_sin-boton.jpg");'>
+          <div style="margin-top:130%;" class="divider"></div>
+          <button class="centerTinier boton" id="irAReg"       onclick="changePantalla('registro')"     >Registrarme</button>
+          <button class="centerTinier boton" id="inicioSesion" onclick="changePantalla('inicioSesion')" >Iniciar Sesión</button>
+        </div>
+        <div id="Registro"        style='background-image:url("./assets/img/2-Registro/bg.png");'>
+            <div style="margin-top:55%;" class="divider"></div>
+            <div class="boton" ><input id="formNombre"   type="text" required placeholder="Nombre"></div>
+            <div class="boton" ><input id="formCorreo"   type="text" required placeholder="Correo"></div>
+            <div class="boton" ><input id="formTelefono" type="text" required placeholder="Telefono"></div>
+            <div style="margin-top:15%;" class="divider"></div>
+            <button class="centerTinier boton" id="regBtn">Crear</button>
+        </div>
+        <div id="InicioSesion"      style='background-image:url("./assets/img/3-InicioSesion/Mockup.jpg");'>
+          <div style="margin-top:100%;" class="divider"></div>
+          <button class="continueBoton" onclick="changePantalla('chooseFlow')"
+          style="margin-top: 38vw; margin-right: 0; margin-left: 37%;">Continuar</button>
+        </div>
+        <div id="ChooseFlow"      style='background-image:url("./assets/img/4-Elección/bg_sin_boton.jpg");'>
+          <div style="margin-top:30%;" class="divider"></div>
+          <button class="imageButton" onclick="changePantalla('mayorEdad');
+          document.getElementById('staticReturn').src = './assets/img/Flujo-Botella/boton_ticket.png'; " 
+                  style='background-image:url("./assets/img/4-Elección/BOTON_BOTELLA.png");'></button>
+          <button class="imageButton" onclick="changePantalla('startTicket');
+          document.getElementById('staticReturn').src = './assets/img/Flujo-Tickets/botón_botella.png'; " 
+                  style='background-image:url("./assets/img/4-Elección/BOTON_TICKET.png");'></button>
+        </div>
+
+        <img id="staticReturn" onclick="changeFlow()" src="./assets/img/Flujo-Tickets/botón_botella.png">
+        <!-- FLOWA -->
+        <div id="SoyMayorDeEdad"  style='background-image:url("./assets/img/1-Bienvenida/bg.jpg");'>
             <div style="margin-top:80%;" class="divider"></div>
-            <div class="continueBoton" id="mayorBtn">Continuar</div>
+            <button class="continueBoton" id="mayorBtn">Continuar</button>
             <input style="margin-left: 10%; display:block; float:left; " type="checkbox" id="mayorCheck">
             <label for="mayorCheck" class="checkboxLabel">Soy mayor de edad</label>
         </div>
-        <div class="internal" id="Registro"
-        style='background-image:url("./assets/img/2-Registro/bg.png");'>
-              <div style="margin-top:55%;" class="divider"></div>
-              <div class="boton" ><input id="formNombre"   type="text" required placeholder="Nombre"></div>
-              <div class="boton" ><input id="formCorreo"   type="text" required placeholder="Correo"></div>
-              <div class="boton" ><input id="formTelefono" type="text" required placeholder="Telefono"></div>
-              <div style="margin-top:15%;" class="divider"></div>
-              <div class="boton" id="regBtn" style="margin-left: 30%; margin-right: 30%; width: 40%; text-align: center;">Crear</div>
-          </div>
-        <div class="internal" id="Quiz"
-        style='background-image:url("./assets/img/3-Preguntas/bg.jpg");'>
+        <div id="HowToQuiz"       style='background-image:url("./assets/img/Flujo-Botella/instruccionesA.png");'>
+          <div style="margin-top:80%;" class="divider"></div>
+          <button class="continueBoton" onclick=
+          "
+          document.getElementById('nameken').innerHTML = document.getElementById('formNombre').value + 'ken';
+          nextQuestion();
+          changePantalla('quiz');
+          "
+          style="margin-top: 38vw; margin-right: 0; margin-left: 37%;">Continuar</button>
+        </div>
+        <div id="Quiz"            style='background-image:url("./assets/img/3-Preguntas/bg.jpg");'>
             <img id="preguntaImg">
             <p id="pregunta">Sin pregunta</p>
             <p style="text-align:center; font-size:50%; position:relative; float:left; width: 100%;">Elige la opcion que mas te guste</p>
-            <div class="botonQuiz left" id="btn1">Boton1</div>
-            <div class="botonQuiz right" id="btn2">Boton2</div>
-            <div class="botonQuiz left" id="btn3">Boton3</div>
-            <div class="botonQuiz right" id="btn4">Boton4</div>
+            <button class="botonQuiz left" id="btn1">Boton1</button>
+            <button class="botonQuiz right" id="btn2">Boton2</button>
+            <button class="botonQuiz left" id="btn3">Boton3</button>
+            <button class="botonQuiz right" id="btn4">Boton4</button>
         </div>
-        <div class="internal" id="CreandoBotella"
-          style='background-image:url("./assets/img/4-Creando-botella/bg.png");'>
+        <div id="CreandoBotella"  style='background-image:url("./assets/img/4-Creando-botella/bg.png");'>
           <p id="yaCasiEsta"></p>
           <img id="imgLoad" src="./assets/img/4-Creando-botella/cargando.png">
         </div>
-        <div class="internal" id="ChooseImagen"
-          style='background-image:url("./assets/img/5-Escoge/bg.png");'>
+        <div id="ChooseImagen"    style='background-image:url("./assets/img/5-Escoge/bg.png");'>
         </div>
-        <div class="internal" id="ImagenFinal"
-          style='background-image:url("./assets/img/6-Botella/bg.png");'>
+        <div id="ImagenFinal"     style='background-image:url("./assets/img/6-Botella/bg.png");'>
           <div id="imagenDetras"></div>
           <p id="nameken"></p>
           <div style="margin-top:20%;" class="divider"></div>
         </div>
+
+        <!-- FLOWB -->
+        <div id="StartTicket"    style='background-image:url("./assets/img/Flujo-Tickets/1-Inicio/bg_sin_boton.png");'>
+          <div style="margin-top:85%;" class="divider"></div>
+          <button class="continueBoton" onclick="changePantalla('regTicket')">Continuar</button>
+        </div>
+        <div id="RegistroTicket"    style='background-image:url("./assets/img/Flujo-Tickets/2-Ticket-regisdtro/bg_sin_botones.png");'>
+          <div style="margin-top:120%;" class="divider"></div>
+          <button class="continueBoton" onclick="changePantalla('recuerda')"
+          style="width: 50%; margin-top: 38vw; margin-right: 0; margin-left: 25%;">Registrar Ticket</button>
+        </div>
+        <div id="Recuerda"    style='background-image:url("./assets/img/Flujo-Tickets/3-Guarda-ticket/bg_sin_botón.png");'>
+          <div style="margin-top:120%;" class="divider"></div>
+          <button class="centerTinier boton"  onclick="changePantalla('eventoParti')"     >Siguiente</button>
+        </div>
+        <div id="EventoParti"    style='background-image:url("./assets/img/Flujo-Tickets/4-evento/mockup.png");'>
+        </div>
+
       </div>
-      <script src="./assets/idx.js"></script>
+      <script src="./assets/js/idx.js"></script>
   </body>
 </html>
